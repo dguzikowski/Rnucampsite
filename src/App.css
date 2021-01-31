@@ -3,7 +3,7 @@ body {
 }
 
 .card-title {
-  font: 500 1.25rem "Anton", italic;
+  font: 400 1.25rem "Anton";
 }
 
 .card-img-overlay .card-title {

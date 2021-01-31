@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 // create campsiteinfo class component
-
 class CampsiteInfo extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +21,7 @@ class CampsiteInfo extends Component {
             </div>
         );
     }
-
+    // render in comments
     renderComments(comments) {
         if (comments) {
             return (
