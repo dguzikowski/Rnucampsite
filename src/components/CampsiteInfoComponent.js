@@ -18,7 +18,7 @@ function RenderCampsite({ campsite }) {
   );
 }
 
-function RenderComments({ comments, addComment,  campsiteId}) {
+function RenderComments({ comments, postComment,  campsiteId}) {
   if (comments) {
     return (
       <div className="col-md-5 m-1">
@@ -36,7 +36,7 @@ function RenderComments({ comments, addComment,  campsiteId}) {
             </p>
           </div>
         ))}
-        <CommentForm campsiteId={campsiteId} addComment={addComment} />
+        <CommentForm campsiteId={campsiteId} postComment={postComment} />
       </div>
     );
   }
@@ -85,7 +85,7 @@ function CampsiteInfo(props) {
           <RenderCampsite campsite={props.campsite} />
           <RenderComments
             comments={props.comments} 
-            addComment={props.addComment}
+            postComment={props.postComment}
             campsiteId={props.campsite.id}
           />
         </div>
@@ -96,8 +96,8 @@ function CampsiteInfo(props) {
 }
 
 const required = (val) => val && val.length;
-const maxLength = (len) => (val) => !val || val.length <= len;
-const minLength = (len) => (val) => val && val.length >= len;
+const maxLength = len => val => !(val) || (val.length <= len);
+const minLength = len => val => val && (val.length >= len);
 
 class CommentForm extends Component {
   constructor(props) {
@@ -114,7 +114,7 @@ class CommentForm extends Component {
 
   handleSubmit(values) {
     this.toggleModal();
-    this.props.addComment(this.props.capsiteId, values.rating, values.author, values.text);
+    this.props.postComment(this.props.capsiteId, values.rating, values.author, values.text);
   }
 
   render() {
