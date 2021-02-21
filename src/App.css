@@ -1,43 +1,16 @@
 body {
-  font-family: "Dosis", sans-serif;
-}
-
-h1, h2, h3, .card-body>.card-title {
-  font-family: "Anton"
-}
-
-.card-title {
-  font-weight: 500;
-  font-size: 1.25rem;
-}
-
-h2 {
-  color: #3046C5;
-}
-
-.card-img-overlay .card-title {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, .card-body>.card-title {
-  font-family: "Lobster", cursive;
-}
-
-.card-title {
-  font-weight: 500;
-  font-size: 1.25rem;
+h1, h2, h3, .card-body>h5 {
+font-family: "Lobster", cursive;
 }
 
 h2 {
   color: #3046C5;
 }
 
-.card-img-overlay .card-title {
+.card-img-overlay h5 {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -69,9 +42,8 @@ h2 {
 }
 
 .page-enter {
-  opacity: 0.8;
-  transform: rotate(720deg) scale(3);
-  transform: translateX(100%);
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .page-enter-active {
@@ -79,13 +51,3 @@ h2 {
   transform: translateX(0%);
   transition: 300ms ease-out;
 }
-
-.page-exit {
-  opacity: 1;
-}
-
-.page-exit-active {
-  opacity: 0;
-  transition: 300ms ease-in;
-}
-
